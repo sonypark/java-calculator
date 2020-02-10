@@ -28,8 +28,12 @@ public enum Operator {
 		return expression.apply(firstOperand, secondOperand);
 	}
 
-	public String getOperator() {
-		return operator;
+	public static boolean isDivide(String operator) {
+		return operator.equals(DIVIDE.operator);
+	}
+
+	public static boolean isMinus(String term) {
+		return term.startsWith(MINUS.operator);
 	}
 
 }
